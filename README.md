@@ -1,4 +1,6 @@
 # Question 1(Javascript)
+[Solution 1](./solution1.js)
+
 You are given a list of names of new employees in a company. You need to generate a company email address for each of them.
 
 The name of each person consists of two or three parts: a first name, an optional middle name, and a last name, separated by spaces. Each part can include only English letters (but the last name may additionally contain hyphens). The name of the company also consists only of English letters.
@@ -40,6 +42,8 @@ In your solution, focus on correctness. The performance of your solution will no
 
 # Question 2
 
+[Solution](./solution2.js)
+
 You are given an array S consisting of N strings. Every string is of the same length M.
 
  Your task is to find a pair of strings in array S, such that there exists a position in which both of the strings have the same letter. Both the index in array S and the positions in the strings are numbered from zero.
@@ -70,4 +74,41 @@ Write an efficient algorithm for the following assumptions:
 - M is an integer within the range [1..2,000];
 - each element of S consists only of lowercase English letters (a-z);
 - N * M ≤ 30,000.
+
+# Question 3(Ruby)
+
+There are N hospitals, numbered from 0 to N−1.
+
+ You are given a schedule of work in each of the hospitals for the following M days.
+ 
+  The schedule is provided in the form of a two-dimensional array A containing N rows, each row representing the schedule of one hospital, and M columns, each column representing one day.
+  
+   Integer A[K][L] (for K within the range [0..N−1] and L within the range [0..M−1]) represents the ID of the doctor working at hospital K on day L.
+   
+    Note that sometimes an individual doctor may work at more than one hospital even on the same day.
+
+## Write a function:
+### def solution(a)
+
+that, given a matrix A consisting of N rows and M columns representing the hospitals' schedules, finds the number of doctors working at more than one hospital.
+
+### Examples:
+
+1. Given A = [ [1, 2, 2], [3, 1, 4] ], the function should return 1.
+
+The doctor with ID 1 works at both hospitals. The doctor with ID 2 works only at hospital number 0, while the doctors with IDs 3 and 4 work only at hospital number 1.
+
+2. Given A = [ [1, 1, 5, 2, 3], [4, 5, 6, 4, 3], [9, 4, 4, 1, 5] ], the function should return 4.
+
+The doctors with IDs 1, 3, 4 and 5 work at more than one hospital.
+
+3. Given A = [ [4, 3], [5, 5], [6, 2] ], the function should return 0.
+
+Each doctor works only at one hospital.
+
+Write an efficient algorithm for the following assumptions:
+
+- N and M are integers within the range [1..1,000];
+- each element of matrix A is an integer within the range [1..N*M].
+
 
