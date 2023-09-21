@@ -4,7 +4,7 @@
 // the indices of the strings with the same element occuring at the same index 
 // and the endex of the common element
 // 
-const S = ["abc", "bca", "dbe"] 
+const S = ["zzzz", "ferz", "zdsr", "fgtd"] 
 
 function solution(S){
     let charObject = {};
@@ -19,11 +19,12 @@ function solution(S){
                 charObject[char] = [i,j];
                 console.log(charObject)
             }
-            else {
+            else if (charObject[char]){
                [ prevStr, prevChar] = charObject[char];
-            //    console.log(charObject)
-
-               if (prevStr !== i && prevChar === j){
+               if (prevStr === i){
+                charObject[char] = [i,j]
+               }
+               else if (prevStr !== i && prevChar === j){
                 return [prevStr, i, j]
                }
             }
